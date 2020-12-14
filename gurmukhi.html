@@ -1,0 +1,64 @@
+<html><head>
+<style>
+@font-face {
+  font-family: "MithilaUni";
+  src: url('MithilaUni.ttf') format('truetype');  
+}
+
+textarea {
+font-family: inherit;
+font-size: inherit;
+width: 99.8%;
+min-height:400pt;
+}
+
+#input_text {
+font-family: "MithilaUni";
+font-size: 20pt;
+}
+#output_text {
+font-family: "MithilaUni";
+font-size: 25pt;
+}
+
+</style>
+<script>
+var n1 = "";
+var n2 = 0;
+var n3 = "";
+var s = "\ \u0901\u0902\u0903\u0905\u0906\u0907\u0908\u0909\u090A\u090F\u0910\u0913\u0914\u0915\u0916\u0917\u0918\u0919\u091A\u091B\u091C\u091D\u091E\u091F\u0920\u0921\u0922\u0923\u0924\u0925\u0926\u0927\u0928\u092A\u092B\u092C\u092D\u092E\u092F\u0930\u0932\u0933\u0935\u0936\u0938\u0939\u093C\u093E\u093F\u0940\u0941\u0942\u0947\u0948\u094B\u094C\u094D\u0951\u0959\u095A\u095B\u095C\u095E\u0966\u0967\u0968\u0969\u096A\u096B\u096C\u096D\u096E\u096F\u0970\u0971\u0972\u0973\u0974\u0975\u0976";
+var c=new Array("\ ","\u0A01","\u0A02","\u0A03","\u0A05","\u0A06","\u0A07","\u0A08","\u0A09","\u0A0A","\u0A0F","\u0A10","\u0A13","\u0A14","\u0A15","\u0A16","\u0A17","\u0A18","\u0A19","\u0A1A","\u0A1B","\u0A1C","\u0A1D","\u0A1E","\u0A1F","\u0A20","\u0A21","\u0A22","\u0A23","\u0A24","\u0A25","\u0A26","\u0A27","\u0A28","\u0A2A","\u0A2B","\u0A2C","\u0A2D","\u0A2E","\u0A2F","\u0A30","\u0A32","\u0A33","\u0A35","\u0A36","\u0A38","\u0A39","\u0A3C","\u0A3E","\u0A3F","\u0A40","\u0A41","\u0A42","\u0A47","\u0A48","\u0A4B","\u0A4C","\u0A4D","\u0A51","\u0A59","\u0A5A","\u0A5B","\u0A5C","\u0A5E","\u0A66","\u0A67","\u0A68","\u0A69","\u0A6A","\u0A6B","\u0A6C","\u0A6D","\u0A6E","\u0A6F","\u0A70","\u0A71","\u0A72","\u0A73","\u0A74","\u0A75","\u0A76");
+
+function upd()
+{
+n3="";
+text1= document.forms[0].input_text.value;
+  for (i=0; i<text1.length; i++)
+    {
+n1 = text1.charAt(i); 
+n2 = s.indexOf(n1);
+if (n2 != -1) { n3 = n3+c[n2];}
+else { n3 = n3+n1;}
+
+    }
+// य का स्वरूप	
+if (document.forms[0].ya.value =="1"){
+  n3 = n3.replace(/\uD805\uDCA8/g, "\uD805\uDCA8\uD805\uDCC3"); 
+}
+
+document.forms[0].input_text.value = n3;
+}
+
+</script>
+</head>
+<body>
+<form>
+<center>
+ <h1 style= "color:red; font-family: MithilaUni;">गुरुमुख</h1>
+ </center>
+
+  <p><textarea name="input_text" id = "input_text" ondblclick= "upd()" onpointermove= "upd()" onpointerenter= "upd()" onplaying = "upd()" onkeypress = "upd()"  ></textarea></p>
+</form>
+
+</body>
+</html>
