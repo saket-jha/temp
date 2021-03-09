@@ -20,6 +20,14 @@ input.btn{
 
 }
 
+input.timeText{
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: xx-large;
+
+}
+
 marquee{
   color: white;
   font-size: larger;
