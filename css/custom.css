@@ -53,3 +53,16 @@ p.b{
 .bold{
   font-size: larger;
 }
+
+a.whatsapp_button {
+
+  border: solid;
+  border: #0d09f1;
+  background-size: contain;
+  background: #fc8f01;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
