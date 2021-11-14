@@ -12,13 +12,25 @@
                 var num = document.getElementById("number").value;
                 var nam = document.getElementById("name").value;
                 var snam = document.getElementById("sname").value;
+                var ynam = document.getElementById("yname").value;
+                var cMsg = document.getElementById("customMsg").value;
                 var testbk = document.getElementById("testbook");
 
                 if (testbk.checked == true ) {
-                    var msg = "Dear%20" + nam + "%20" + snam + "%2C%0AI%20am%20Sujasya%20Kumari%20from%20Testbook.com%20-%20India%27s%20Leading%20OnlinePlatform%20for%20All%20GOVERNMENT%20JOB%20EXAMINATIONS%2C%20with%20over%202%20Crore%20plus%20registered%20students.%20I%20tried%20reaching%20out%20to%20you%2C%20but%20was%20unable%20to%20connect.%20If%20you%20have%20any%20queries%20or%20looking%20for%20Special%20Discounts%2C%20please%20get%20in%20touch%20with%20me%20on%208045465011.%20I%27ll%20be%20glad%20to%20guide%20you!%0A%0AThanks%20%26%20Regards%2C%0ASujasya%20Kumari/";
+                    var msg = "Dear%20" + nam + "%20" + snam + "%2C%0AI%20am%20" + ynam + "%20from%20Testbook.com%20-%20India%27s%20Leading%20OnlinePlatform%20for%20All%20GOVERNMENT%20JOB%20EXAMINATIONS%2C%20with%20over%202%20Crore%20plus%20registered%20students.%20I%20tried%20reaching%20out%20to%20you%2C%20but%20was%20unable%20to%20connect.%20If%20you%20have%20any%20queries%20or%20looking%20for%20Special%20Discounts%2C%20please%20get%20in%20touch%20with%20me%20on%208045465011.%20I%27ll%20be%20glad%20to%20guide%20you!%0A%0AThanks%20%26%20Regards%2C%0ASujasya%20Kumari/";
                     
                 } else {
-                    var msg = "Hello%20" + nam + "%20" + snam ;
+                    if (cMsg == "Hello....") {
+                        var msg = "Hello%20" + nam + "%20" + snam ;
+                    }
+                    if (cMsg == "") {
+                        var msg = "Hello%20" + nam + "%20" + snam ;
+                    } else {
+
+                        var msg = "Hello%20" + nam + "%20" + snam + "%2C%0A" + cMsg ;
+
+                    }
+                   
                 }
 
                 
@@ -47,6 +59,8 @@
     SurName Of Person: <input type="text" style="box-sizing: content-box; font-weight: bolder; font-size: xx-large;" id="sname" value="Jha" onfocus="if (this.value == 'Jha') this.value=''" ...     /><br>
     Are You Testbook BD: <input type="checkbox" style="width: 50px; height: 50px;" id="testbook" /><br><br>
     ( यदि आप Testbook BD नहीं हैं तो इसे Tick ✓ न करें )<br><br>
+    Your Name (Optional): <input type="text" style="box-sizing: content-box; font-weight: bolder; font-size: xx-large;" id="yname" value="Name Surname" onfocus="if (this.value == 'Name Surname') this.value=''" ...     /><br>
+    Your Message (Optional): <input type="text" style="box-sizing: content-box; font-weight: bolder; font-size: xx-large;" id="customMsg" value="Hello...." onfocus="if (this.value == 'Hello....') this.value=''" ...     /><br>
     
     
     <input type="button" style="background-color: lawngreen; color: lemonchiffon; height: 50px; font-size: xx-large; font-weight: bolder; border-color: orange;" value="Send Message" onclick="sendMsg()" />
