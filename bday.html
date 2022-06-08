@@ -1,11 +1,32 @@
 <html>
     <head>
+        <style>
+            .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1f00e6, 0 0 40px #3d00e6, 0 0 50px #001fe6, 0 0 60px #5c00e6, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #c44dff, 0 0 70px #4d4dff, 0 0 80px #ff4da6;
+  }
+}
+        </style>
 
     </head>
 
-    <body>
+
+
+    <body style="background-color:pink; background-image: url(./vs.jpg);">
+
         <center>
-        <H1 style="font-weight:bold; color: red; font-size: xx-large;">
+        <H1 class="glow" style="font-weight:bold; color: red; font-size: xx-large;">
         Happy Birthday To You Dear
         </H1>
         <H2 style="font-weight:bold; color: red; font-size: xx-large;">
