@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marriage Anniversary Wish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #ff6f61;
+            color: #ffffff;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .card {
+            display: none; /* hidden initially */
+            margin-top: 20px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h1 {
+            margin-top: 0;
+            color: #ff6f61;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Click here button -->
+        <button id="showWishBtn"> यहाँ दबाएं </button>
+
+        <!-- Hidden anniversary content -->
+        <div class="card" id="anniversaryCard">
+            <h1>Happy Marriage Anniversary</h1>
+            <h2> Mama &amp; Maami</h2>
+            <div class="message">
+                Wishing you both a lifetime of love, happiness and togetherness. 💖
+               
+            </div>
+            <!-- Local image in the same folder as this HTML file -->
+            <img src="a.jpg" alt="Saket and Sandhya">
+        </div>
+    </div>
+
+    <script>
+        // Show the card when button is clicked
+        document.getElementById("showWishBtn").addEventListener("click", function () {
+            var card = document.getElementById("anniversaryCard");
+            if (card.style.display === "none" || card.style.display === "") {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none"; // click again to hide if you want
+            }
+        });
+    </script>
+</body>
+</html>
