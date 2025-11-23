@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>विशेष</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button, a.downloadBtn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #ff4081;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        #birthdayContent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="showBtn">एतय दबाऊ</button>
+
+        <div id="birthdayContent">
+            <h1>🎉 जन्मदिवसस्य शुभकामना 🎉</h1>
+            <h2>भ्राता श्री</h2>
+
+            <video id="video" playsinline>
+                <source src="a.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+            <!-- ✅ Download Video Button -->
+            <a class="downloadBtn" href="a.mp4" download="birthday_video.mp4">
+                Download Video
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showBtn").addEventListener("click", () => {
+            document.getElementById("birthdayContent").style.display = "block";
+
+            const video = document.getElementById("video");
+            video.muted = false;
+            video.play();
+        });
+    </script>
+</body>
+</html>
